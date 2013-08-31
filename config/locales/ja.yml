@@ -1,0 +1,181 @@
+ja:
+  date:
+    formats:
+      # Use the strftime parameters for formats.
+      # When no format has been given, it uses default.
+      # You can provide other formats here if you like!
+      default: "%Y/%m/%d"
+      short: "%m/%d"
+      long: "%Y年%m月%d日(%a)"
+
+    day_names: [日曜日, 月曜日, 火曜日, 水曜日, 木曜日, 金曜日, 土曜日]
+    abbr_day_names: [日, 月, 火, 水, 木, 金, 土]
+
+    # Don't forget the nil at the beginning; there's no such thing as a 0th month
+    month_names: [~, 1月, 2月, 3月, 4月, 5月, 6月, 7月, 8月, 9月, 10月, 11月, 12月]
+    abbr_month_names: [~, 1月, 2月, 3月, 4月, 5月, 6月, 7月, 8月, 9月, 10月, 11月, 12月]
+    # Used in date_select and datime_select.
+    order:
+      - :year
+      - :month
+      - :day
+
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M:%S"
+      time: "%H:%M"
+      short: "%y/%m/%d %H:%M"
+      long: "%Y年%m月%d日(%a) %H時%M分%S秒 %Z"
+    am: "午前"
+    pm: "午後"
+
+  datetime:
+    distance_in_words:
+      half_a_minute: "30秒前後"
+      less_than_x_seconds:
+        one:   "1秒以内"
+        other: "%{count}秒以内"
+      x_seconds:
+        one:   "1秒"
+        other: "%{count}秒"
+      less_than_x_minutes:
+        one:   "1分以内"
+        other: "%{count}分以内"
+      x_minutes:
+        one:   "1分"
+        other: "%{count}分"
+      about_x_hours:
+        one:   "約1時間"
+        other: "約%{count}時間"
+      x_days:
+        one:   "1日"
+        other: "%{count}日"
+      about_x_months:
+        one:   "約1ヶ月"
+        other: "約%{count}ヶ月"
+      x_months:
+        one:   "1ヶ月"
+        other: "%{count}ヶ月"
+      about_x_years:
+        one:   "約1年"
+        other: "約%{count}年"
+      over_x_years:
+        one:   "1年以上"
+        other: "%{count}年以上"
+      almost_x_years:
+        one:   "ほぼ1年"
+        other: "ほぼ%{count}年"
+
+  number:
+    format:
+      separator: "."
+      delimiter: ","
+      precision: 3
+
+    currency:
+      format:
+        format: "%n%u"
+        unit: "円"
+        separator: "."
+        delimiter: ","
+        precision: 0
+
+    percentage:
+      format:
+        delimiter: ""
+
+    precision:
+      format:
+        delimiter: ""
+
+    human:
+      format:
+        delimiter: ""
+        precision: 3
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one:   "Byte"
+            other: "Bytes"
+          kb: "KB"
+          mb: "MB"
+          gb: "GB"
+          tb: "TB"
+          
+  views:
+    pagination:
+      first:    "最初"
+      last:     "最後"
+      previous: "前へ"
+      next:     "次へ"
+      truncate: "..."
+
+  button_apply:  "適用"
+  button_clear:  "クリア"
+  button_delete: "削除"
+  button_create: "作成"
+  button_add:    "追加"
+  button_change: "変更"
+  
+  listing_foods:     "食品一覧"
+  
+  field_search_result:                      "検索結果: %{count}件"
+  field_food_group:                         "食品群"
+  field_food_group_number:                  "食品群番号"
+  field_food_number:                        "食品番号"
+  field_classification:                     "大分類"
+  field_subdivision:                        "中分類/小分類/細分"
+  field_food_name:                          "食品名"
+  field_refuse:                             "廃棄率"
+  field_energy:                             "エネルギー[kcal]"
+  field_energy_kj:                          "エネルギー[KJ]"
+  field_water:                              "水分[g/100g]"
+  field_protein:                            "蛋白質[g/100g]"
+  field_protein_sum_of_amino_acid_residuse: "アミノ酸組成による蛋白質[g/100g]"
+  field_lipid:                              "脂質[g/100g]"
+  field_triacylglycerol_equivalents:        "トリアシルグリセロール当量[g/100g]"
+  field_carbohydrate:                       "炭水化物[g/100g]"
+  field_ash:                                "灰分[g/100g]"
+  field_sodium:                             "ナトリウム[mg/100g]"
+  field_potassium:                          "カリウム[mg/100g]"
+  field_calcium:                            "カルシウム[mg/100g]"
+  field_magnesium:                          "マグネシウム[mg/100g]"
+  field_phosphorus:                         "リン[mg/100g]"
+  field_iron:                               "鉄[mg/100g]"
+  field_zinc:                               "亜鉛[mg/100g]"
+  field_copper:                             "銅[mg/100g]"
+  field_manganese:                          "マンガン[mg/100g]"
+  field_iodine:                             "ヨウ素[μg/100g]"
+  field_selenium:                           "セレン[μg/100g]"
+  field_chromium:                           "クロム[μg/100g]"
+  field_molybdenum:                         "モリブデン[μg/100g]"
+  field_retinol:                            "レチノール[μg/100g]"
+  field_alpha_carotenes:                    "αカロテン[μg/100g]"
+  field_beta_carotenes:                     "βカロテン[μg/100g]"
+  field_beta_cryptoxanthin:                 "β-クリプトキサンチン[μg/100g]"
+  field_bata_carotene_equivalents:          "β-カロテン当量[μg/100g]"
+  field_retinol_activity_equivalents:       "レチノール当量[μg/100g]"
+  field_vitamind:                           "ビタミンD[μg/100g]"
+  field_alpha_tocopherols:                  "αトコフェロール[mg/100g]"
+  field_beta_tocopherols:                   "βトコフェロール[mg/100g]"
+  field_gamma_tocopherols:                  "γトコフェロール[mg/100g]"
+  field_delta_tocopherols:                  "δトコフェロール[mg/100g]"
+  field_vitamink:                           "ビタミンK[μg/100g]"
+  field_thiamin:                            "ビタミンB1[mg/100g]"
+  field_riboflavin:                         "ビタミンB2[mg/100g]"
+  field_niacin:                             "ナイアシン[mg/100g]"
+  field_vitaminb6:                          "ビタミンB6[mg/100g]"
+  field_vitaminb12:                         "ビタミンB12[μg/100g]"
+  field_folate:                             "葉酸[μg/100g]"
+  field_pantothenic_acid:                   "パントテン酸[mg/100g]"
+  field_biotin:                             "ビオチン[μg/100g]"
+  field_ascorbic_acid:                      "ビタミンC[mg/100g]"
+  field_saturated_fatty_acids:              "飽和脂肪酸[g/100g]"
+  field_monounsaturated_fatty_acids:        "一価不飽和脂肪酸[g/100g]"
+  field_polyunsaturated_fatty_acids:        "多価不飽和脂肪酸[g/100g]"
+  field_cholesterol:                        "コレステロール[mg/100g]"
+  field_soluble_dietary_fibers:             "水溶性食物繊維[g/100g]"
+  field_insoluble_dietary_fibers:           "不溶性食物繊維[g/100g]"
+  field_total_dietary_fibers:               "食物繊維総量[g/100g]"
+  field_salt_equivalents:                   "塩分相当量[g/100g]"

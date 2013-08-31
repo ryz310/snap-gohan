@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t :field_food_group_number %>:</strong>
+  <%= @food_group.number %>
+</p>
+
+<p>
+  <strong><%= t :field_food_group %>:</strong>
+  <%= @food_group.name %>
+</p>
+
+<%= link_to 'Edit', edit_food_group_path(@food_group) %> |
+<%= link_to 'Back', food_groups_path %>

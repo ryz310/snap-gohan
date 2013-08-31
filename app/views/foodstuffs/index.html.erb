@@ -1,0 +1,31 @@
+<h1>Listing foodstuffs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Menu</th>
+      <th>Food</th>
+      <th>Amount</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @foodstuffs.each do |foodstuff| %>
+      <tr>
+        <td><%= foodstuff.menu %></td>
+        <td><%= foodstuff.food %></td>
+        <td><%= foodstuff.amount %></td>
+        <td><%= link_to 'Show', foodstuff %></td>
+        <td><%= link_to 'Edit', edit_foodstuff_path(foodstuff) %></td>
+        <td><%= link_to 'Destroy', foodstuff, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Foodstuff', new_foodstuff_path %>

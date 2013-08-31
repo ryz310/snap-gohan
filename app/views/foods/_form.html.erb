@@ -1,0 +1,248 @@
+<%= form_for(@food) do |f| %>
+  <% if @food.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@food.errors.count, "error") %> prohibited this food from being saved:</h2>
+
+      <ul>
+      <% @food.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+
+  <div class="field">
+    <%= f.label t(:field_food_group) %><br>
+    <%= f.collection_select :group, FoodGroup.all.order(:number), :id, :name %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_food_number) %><br>
+    <%= f.text_field :number, maxlength: 5 %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_classification) %><br>
+    <%= f.text_field :classification %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_subdivision) %><br>
+    <%= f.text_field :subdivision %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_food_name) %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_refuse) %><br>
+    <%= f.text_field :refuse %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_energy) %><br>
+    <%= f.text_field :energy %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_energy_kj) %><br>
+    <%= f.text_field :energy_kj %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_water) %><br>
+    <%= f.text_field :water %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_protein) %><br>
+    <%= f.text_field :protein %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_protein_sum_of_amino_acid_residuse) %><br>
+    <%= f.text_field :protein_sum_of_amino_acid_residuse %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_lipid) %><br>
+    <%= f.text_field :lipid %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_triacylglycerol_equivalents) %><br>
+    <%= f.text_field :triacylglycerol_equivalents %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_carbohydrate) %><br>
+    <%= f.text_field :carbohydrate %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_ash) %><br>
+    <%= f.text_field :ash %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_sodium) %><br>
+    <%= f.text_field :sodium %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_potassium) %><br>
+    <%= f.text_field :potassium %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_calcium) %><br>
+    <%= f.text_field :calcium %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_magnesium) %><br>
+    <%= f.text_field :magnesium %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_phosphorus) %><br>
+    <%= f.text_field :phosphorus %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_iron) %><br>
+    <%= f.text_field :iron %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_zinc) %><br>
+    <%= f.text_field :zinc %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_copper) %><br>
+    <%= f.text_field :copper %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_manganese) %><br>
+    <%= f.text_field :manganese %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_iodine) %><br>
+    <%= f.text_field :iodine %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_selenium) %><br>
+    <%= f.text_field :selenium %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_chromium) %><br>
+    <%= f.text_field :chromium %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_molybdenum) %><br>
+    <%= f.text_field :molybdenum %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_retinol) %><br>
+    <%= f.text_field :retinol %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_alpha_carotenes) %><br>
+    <%= f.text_field :alpha_carotenes %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_beta_carotenes) %><br>
+    <%= f.text_field :beta_carotenes %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_beta_cryptoxanthin) %><br>
+    <%= f.text_field :beta_cryptoxanthin %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_bata_carotene_equivalents) %><br>
+    <%= f.text_field :bata_carotene_equivalents %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_retinol_activity_equivalents) %><br>
+    <%= f.text_field :retinol_activity_equivalents %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_vitamind) %><br>
+    <%= f.text_field :vitamind %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_alpha_tocopherols) %><br>
+    <%= f.text_field :alpha_tocopherols %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_beta_tocopherols) %><br>
+    <%= f.text_field :beta_tocopherols %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_gamma_tocopherols) %><br>
+    <%= f.text_field :gamma_tocopherols %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_delta_tocopherols) %><br>
+    <%= f.text_field :delta_tocopherols %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_vitamink) %><br>
+    <%= f.text_field :vitamink %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_thiamin) %><br>
+    <%= f.text_field :thiamin %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_riboflavin) %><br>
+    <%= f.text_field :riboflavin %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_niacin) %><br>
+    <%= f.text_field :niacin %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_vitaminb6) %><br>
+    <%= f.text_field :vitaminb6 %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_vitaminb12) %><br>
+    <%= f.text_field :vitaminb12 %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_folate) %><br>
+    <%= f.text_field :folate %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_pantothenic_acid) %><br>
+    <%= f.text_field :pantothenic_acid %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_biotin) %><br>
+    <%= f.text_field :biotin %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_ascorbic_acid) %><br>
+    <%= f.text_field :ascorbic_acid %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_saturated_fatty_acids) %><br>
+    <%= f.text_field :saturated_fatty_acids %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_monounsaturated_fatty_acids) %><br>
+    <%= f.text_field :monounsaturated_fatty_acids %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_polyunsaturated_fatty_acids) %><br>
+    <%= f.text_field :polyunsaturated_fatty_acids %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_cholesterol) %><br>
+    <%= f.text_field :cholesterol %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_soluble_dietary_fibers) %><br>
+    <%= f.text_field :soluble_dietary_fibers %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_insoluble_dietary_fibers) %><br>
+    <%= f.text_field :insoluble_dietary_fibers %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_total_dietary_fibers) %><br>
+    <%= f.text_field :total_dietary_fibers %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_salt_equivalents) %><br>
+    <%= f.text_field :salt_equivalents %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
