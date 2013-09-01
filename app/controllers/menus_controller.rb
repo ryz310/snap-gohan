@@ -4,7 +4,19 @@ class MenusController < ApplicationController
   # GET /menus
   # GET /menus.json
   def index
-    @menus = Menu.all
+    p = params[:target] || Hash.new
+    @category_id = p[:category] || MenuCategory.first.id
+    @size        = p[:size    ] || 10
+    
+    menu_condition = Menu
+                      .where(category_id: @category_id)
+    @category      = MenuCategory
+                      .find(@category_id)                        
+    @menus_count   = menu_condition
+                      .count
+    @menus         = menu_condition
+                      .page(params[:page])
+                      .per(@size)
   end
 
   # GET /menus/1
@@ -15,6 +27,7 @@ class MenusController < ApplicationController
   # GET /menus/new
   def new
     @menu = Menu.new
+    @menu.category_id = params[:cayegory_id] || MenuCategory.first.id 
   end
 
   # GET /menus/1/edit

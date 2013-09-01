@@ -5,8 +5,8 @@ class FoodsController < ApplicationController
   # GET /foods.json
   def index
     p = params[:target] || Hash.new
-    @group_id = p[:group] || FoodGroup.all.first.id
-    @size     = p[:size] || 10
+    @group_id = p[:group] || FoodGroup.first.id
+    @size     = p[:size ] || 10
     
     food_condition = Food
                       .where(food_group_id: @group_id)
@@ -16,7 +16,6 @@ class FoodsController < ApplicationController
                       .page(params[:page])
                       .per(@size)
                       .order(:number)
-    @hoge = params
   end
 
   # GET /foods/1

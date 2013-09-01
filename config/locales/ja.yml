@@ -122,7 +122,7 @@ ja:
   listing_foods:           "食品一覧"
   listing_foodstuffs:      "材料一覧"
   listing_menu_categories: "メニューカテゴリ一覧"
-  listing_menus:           "メニュー一覧"
+  listing_menus:           "メニュー"
   
   field_search_result:                      "検索結果: %{count}件"
   field_menu_category:                      "カテゴリ"
