@@ -125,6 +125,8 @@ ja:
   listing_menus:           "メニュー一覧"
   
   field_search_result:                      "検索結果: %{count}件"
+  field_menu_name:                          "メニュー名"
+  field_food_amout:                         "分量[g]"
   field_food_group:                         "食品群"
   field_food_group_number:                  "食品群番号"
   field_food_number:                        "食品番号"

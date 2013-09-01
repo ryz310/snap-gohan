@@ -1,11 +1,11 @@
-<h1>Listing foodstuffs</h1>
+<h1><%= t :listing_foodstuffs %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Menu</th>
-      <th>Food</th>
-      <th>Amount</th>
+      <th><%= t :field_menu_name  %></th>
+      <th><%= t :field_food_name  %></th>
+      <th><%= t :field_food_amout %></th>
       <th></th>
       <th></th>
       <th></th>
@@ -15,8 +15,8 @@
   <tbody>
     <% @foodstuffs.each do |foodstuff| %>
       <tr>
-        <td><%= foodstuff.menu %></td>
-        <td><%= foodstuff.food %></td>
+        <td><%= foodstuff.menu.name %></td>
+        <td><%= foodstuff.food.name %></td>
         <td><%= foodstuff.amount %></td>
         <td><%= link_to 'Show', foodstuff %></td>
         <td><%= link_to 'Edit', edit_foodstuff_path(foodstuff) %></td>

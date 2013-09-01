@@ -1,17 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Menu:</strong>
-  <%= @foodstuff.menu %>
+  <strong><%= t :field_menu_name %>:</strong>
+  <%= @foodstuff.menu.name %>
 </p>
 
 <p>
-  <strong>Food:</strong>
-  <%= @foodstuff.food %>
+  <strong><%= t :field_food_name %>:</strong>
+  <%= @foodstuff.food.name %>
 </p>
 
 <p>
-  <strong>Amount:</strong>
+  <strong><%= t :field_food_amout %>:</strong>
   <%= @foodstuff.amount %>
 </p>
 
