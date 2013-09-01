@@ -3,10 +3,11 @@
 <table>
   <thead>
     <tr>
+      <th><%= t :field_menu_image %></th>
       <th><%= t :field_menu_category %></th>
       <th><%= t :field_menu_name %></th>
       <th><%= t :field_menu_description %></th>
-      <th><%= t :field_menu_image %></th>
+      <th><%= t :field_menu_foodstuffs %></th>
       <th></th>
       <th></th>
       <th></th>
@@ -16,10 +17,17 @@
   <tbody>
     <% @menus.each do |menu| %>
       <tr>
+        <td><%= image_tag menu.image_url(:thumb).to_s if menu.image? %></td>
         <td><%= menu.category.name %></td>
         <td><%= menu.name %></td>
         <td><%= menu.description %></td>
-        <td><%= image_tag menu.image_url(:thumb).to_s if menu.image? %></td>
+        <td>
+          <ul>
+          <%- menu.foodstuffs.each do |f| -%>
+            <li><%= "#{f.food.name}: #{f.amount}[g]" %></li>
+          <%- end -%>
+          </ul>
+    	</td>
         <td><%= link_to 'Show', menu %></td>
         <td><%= link_to 'Edit', edit_menu_path(menu) %></td>
         <td><%= link_to 'Destroy', menu, method: :delete, data: { confirm: 'Are you sure?' } %></td>

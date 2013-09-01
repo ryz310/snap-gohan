@@ -129,6 +129,7 @@ ja:
   field_menu_name:                          "メニュー"
   field_menu_description:                   "説明"
   field_menu_image:                         "メニューの写真"
+  field_menu_foodstuffs:                    "材料一覧"
   field_food_group:                         "食品群"
   field_food_group_number:                  "食品群番号"
   field_food_number:                        "食品番号"

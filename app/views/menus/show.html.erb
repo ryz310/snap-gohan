@@ -1,23 +1,31 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Category:</strong>
+  <%= image_tag @menu.image_url.to_s if @menu.image? %>
+</p>
+
+<p>
+  <strong><%= t :field_menu_category %>:</strong>
   <%= @menu.category.name %>
 </p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= t :field_menu_name %>:</strong>
   <%= @menu.name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong><%= t :field_menu_description%>:</strong>
   <%= @menu.description %>
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <%= image_tag @menu.image_url.to_s if @menu.image? %>
+  <strong><%= t :field_menu_foodstuffs%>:</strong>
+  <ul>
+  <%- @menu.foodstuffs.each do |f| -%>
+    <li><%= "#{f.food.name}: #{f.amount}[g]" %></li>
+  <%- end -%>
+  </ul>
 </p>
 
 <%= link_to 'Edit', edit_menu_path(@menu) %> |
