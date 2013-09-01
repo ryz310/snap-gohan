@@ -38,6 +38,9 @@ gem 'kaminari'
 # File upload library.
 gem 'carrierwave'
 
+# A ruby wrapper for ImageMagick or GraphicsMagick command line 
+gem 'mini_magick', '3.5.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
