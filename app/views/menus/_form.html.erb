@@ -12,19 +12,25 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :category %><br>
+    <%= f.label t(:field_menu_category) %><br>
     <%= f.collection_select :category_id, MenuCategory.all, :id, :name %>
   </div>
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label t(:field_menu_name) %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :image %><br>
+    <%= f.label t(:field_menu_description) %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label t(:field_menu_image) %><br>
     <% if @menu.image? %>
-    	<label><%= f.check_box :remove_avatar %>Remove</label>
+      <div>
     	<%= image_tag @menu.image_url(:thumb).to_s %>
+    	<label><%= f.check_box :remove_image %><%= t :button_delete %></label>
     	<%= f.hidden_field :avatar_cache if @menu.image_cache %>
+	  </div>
     <% end %>
     <%= f.file_field :image %>
   </div>
