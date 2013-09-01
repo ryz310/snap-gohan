@@ -1,9 +1,10 @@
-<h1>Listing menu_categories</h1>
+<h1><%= t :listing_menu_categories %></h1>
 
 <table>
   <thead>
     <tr>
       <th>Name</th>
+      <th>Description</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,6 +15,7 @@
     <% @menu_categories.each do |menu_category| %>
       <tr>
         <td><%= menu_category.name %></td>
+        <td><%= menu_category.description %></td>
         <td><%= link_to 'Show', menu_category %></td>
         <td><%= link_to 'Edit', edit_menu_category_path(menu_category) %></td>
         <td><%= link_to 'Destroy', menu_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -35,6 +35,9 @@ end
 # Auto paging library.
 gem 'kaminari'
 
+# File upload library.
+gem 'carrierwave'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

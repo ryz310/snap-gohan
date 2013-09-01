@@ -13,15 +13,20 @@
 
   <div class="field">
     <%= f.label :category %><br>
-    <%= f.text_field :category %>
+    <%= f.collection_select :category_id, MenuCategory.all, :id, :name %>
   </div>
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :image_url %><br>
-    <%= f.text_field :image_url %>
+    <%= f.label :image %><br>
+    <% if @menu.image? %>
+    	<label><%= f.check_box :remove_avatar %>Remove</label>
+    	<%= image_tag @menu.image_url(:thumb).to_s %>
+    	<%= f.hidden_field :avatar_cache if @menu.image_cache %>
+    <% end %>
+    <%= f.file_field :image %>
   </div>
   <div class="actions">
     <%= f.submit %>

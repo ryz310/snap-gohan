@@ -118,7 +118,11 @@ ja:
   button_add:    "追加"
   button_change: "変更"
   
-  listing_foods:     "食品一覧"
+  listing_food_groups:     "食品郡一覧"
+  listing_foods:           "食品一覧"
+  listing_foodstuffs:      "材料一覧"
+  listing_menu_categories: "メニューカテゴリ一覧"
+  listing_menus:           "メニュー一覧"
   
   field_search_result:                      "検索結果: %{count}件"
   field_food_group:                         "食品群"

@@ -1,11 +1,12 @@
-<h1>Listing menus</h1>
+<h1><%= t :listing_menus %></h1>
 
 <table>
   <thead>
     <tr>
       <th>Category</th>
       <th>Name</th>
-      <th>Image url</th>
+      <th>Description</th>
+      <th>Image</th>
       <th></th>
       <th></th>
       <th></th>
@@ -15,9 +16,10 @@
   <tbody>
     <% @menus.each do |menu| %>
       <tr>
-        <td><%= menu.category %></td>
+        <td><%= menu.category.name %></td>
         <td><%= menu.name %></td>
-        <td><%= menu.image_url %></td>
+        <td><%= menu.description %></td>
+        <td><%= image_tag menu.image_url(:thumb).to_s if menu.image? %></td>
         <td><%= link_to 'Show', menu %></td>
         <td><%= link_to 'Edit', edit_menu_path(menu) %></td>
         <td><%= link_to 'Destroy', menu, method: :delete, data: { confirm: 'Are you sure?' } %></td>

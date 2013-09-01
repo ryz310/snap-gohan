@@ -16,7 +16,7 @@
 
   <div class="field">
     <%= f.label t(:field_food_group) %><br>
-    <%= f.collection_select :group, FoodGroup.all.order(:number), :id, :name %>
+    <%= f.collection_select :food_group_id, FoodGroup.all.order(:number), :id, :name %>
   </div>
   <div class="field">
     <%= f.label t(:field_food_number) %><br>

@@ -14,8 +14,8 @@
 ActiveRecord::Schema.define(version: 20130831150135) do
 
   create_table "food_groups", force: true do |t|
-    t.string   "number"
-    t.string   "name"
+    t.string   "number",     limit: 2,  default: "", null: false
+    t.string   "name",       limit: 32, default: "", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -97,14 +97,16 @@ ActiveRecord::Schema.define(version: 20130831150135) do
 
   create_table "menu_categories", force: true do |t|
     t.string   "name"
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "menus", force: true do |t|
     t.integer  "category_id"
-    t.string   "name"
-    t.string   "image_url"
+    t.string   "name",        limit: 64,  default: "", null: false
+    t.string   "description", limit: 256, default: "", null: false
+    t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
