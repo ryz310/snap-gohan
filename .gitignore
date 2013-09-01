@@ -19,3 +19,4 @@
 *.pyo
 documents/~$relation.xlsx
 public/uploads
+/Gemfile.lock
