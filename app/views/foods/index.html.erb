@@ -1,27 +1,26 @@
-<h1><%= t :listing_foods %></h1>
+<h1 class="headline"><%= t :listing_foods %></h1>
 
 <div class="select_form">
-<%= form_tag({controller: controller_name, action: action_name}, method: :get, id: 'query_form') do %>
-	<p class="hide-when-print">
-		<%= collection_select :target, :group, FoodGroup.all.order(:number), :id, :name,  selected: @group_id %>
-		<%= select            :target, :size,  {"10件" => 10, "20件" => 20, "30件" => 30, "50件" => 50}, selected: @size %>
-	</p>
-	<p class="hide-when-print">
-	  <%= link_to_function t(:button_apply), '$("#query_form").submit()', class: 'icon icon-checked' %>
-		<%= link_to t(:button_clear), {controller: controller_name, action: action_name}, class: 'icon icon-reload' %>
-	</p>
-<% end %>
+  <%= form_tag({controller: controller_name, action: action_name}, method: :get, id: 'query_form') do %>
+  	<p class="hide-when-print">
+  	  <%= t :message_select_food_group %>
+  		<%= collection_select :target, :group, FoodGroup.all.order(:number), :id, :name,  selected: @group_id %>
+  		<%= select            :target, :size,  {"10件" => 10, "20件" => 20, "30件" => 30, "50件" => 50}, selected: @size %>
+  
+  	  <%= link_to_function t(:button_apply), '$("#query_form").submit()', class: 'icon icon-checked' %>
+  		<%= link_to t(:button_clear), {controller: controller_name, action: action_name}, class: 'icon icon-reload' %>
+  	</p>
+  <% end %>
+  <p><%= t :field_search_result, count: @foods_count %></p>
 </div>
 
-<%= t :field_search_result, count: @foods_count %>
-<br /><br />
+<h2 class="headline"><%= @food_group_name %></h2>
 
-<%= paginate @foods %>
+<p class="paginate"><%= paginate @foods %></p>
 
 <table>
   <thead>
     <tr>
-      <th><%= t :field_food_group %></th>
       <th><%= t :field_food_number %></th>
       <th><%= t :field_classification %></th>
       <th><%= t :field_subdivision %></th>
@@ -87,7 +86,6 @@
   <tbody>
     <% @foods.each do |food| %>
       <tr>
-        <td><%= food.group.name %></td>
         <td><%= food.number %></td>
         <td><%= food.classification %></td>
         <td><%= food.subdivision %></td>
@@ -152,8 +150,6 @@
   </tbody>
 </table>
 
-<%= paginate @foods %>
-
-<br>
+<p class="paginate"><%= paginate @foods %></p>
 
 <%= link_to 'New Food', new_food_path %>

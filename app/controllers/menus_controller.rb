@@ -7,6 +7,7 @@ class MenusController < ApplicationController
     p = params[:target] || Hash.new
     @category_id = p[:category] || MenuCategory.first.id
     @size        = p[:size    ] || 10
+    @category_name = MenuCategory.find(@category_id).name
     
     menu_condition = Menu
                       .where(category_id: @category_id)

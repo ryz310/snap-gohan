@@ -7,8 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id="header">
+    <h1>Snap Gohan</h1>
+    <div id="main-menu">
+      <ul>
+        <li><%= link_to t(:menu_menus), menus_path %></li>
+        <li><%= link_to t(:menu_foods), foods_path %></li>
+        <li><%= link_to t(:menu_food_groups    ), food_groups_path %></li>
+        <li><%= link_to t(:menu_menu_categories), menu_categories_path %></li>
+      </ul>
+    </div>
+  </div>
 
-<%= yield %>
+  <div id="main">
+    <%= yield %>
+  </div>
 
+  <div id="footer">
+  </div>
 </body>
 </html>

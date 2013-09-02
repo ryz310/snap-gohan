@@ -29,80 +29,6 @@ ja:
     am: "午前"
     pm: "午後"
 
-  datetime:
-    distance_in_words:
-      half_a_minute: "30秒前後"
-      less_than_x_seconds:
-        one:   "1秒以内"
-        other: "%{count}秒以内"
-      x_seconds:
-        one:   "1秒"
-        other: "%{count}秒"
-      less_than_x_minutes:
-        one:   "1分以内"
-        other: "%{count}分以内"
-      x_minutes:
-        one:   "1分"
-        other: "%{count}分"
-      about_x_hours:
-        one:   "約1時間"
-        other: "約%{count}時間"
-      x_days:
-        one:   "1日"
-        other: "%{count}日"
-      about_x_months:
-        one:   "約1ヶ月"
-        other: "約%{count}ヶ月"
-      x_months:
-        one:   "1ヶ月"
-        other: "%{count}ヶ月"
-      about_x_years:
-        one:   "約1年"
-        other: "約%{count}年"
-      over_x_years:
-        one:   "1年以上"
-        other: "%{count}年以上"
-      almost_x_years:
-        one:   "ほぼ1年"
-        other: "ほぼ%{count}年"
-
-  number:
-    format:
-      separator: "."
-      delimiter: ","
-      precision: 3
-
-    currency:
-      format:
-        format: "%n%u"
-        unit: "円"
-        separator: "."
-        delimiter: ","
-        precision: 0
-
-    percentage:
-      format:
-        delimiter: ""
-
-    precision:
-      format:
-        delimiter: ""
-
-    human:
-      format:
-        delimiter: ""
-        precision: 3
-      storage_units:
-        format: "%n %u"
-        units:
-          byte:
-            one:   "Byte"
-            other: "Bytes"
-          kb: "KB"
-          mb: "MB"
-          gb: "GB"
-          tb: "TB"
-          
   views:
     pagination:
       first:    "最初"
@@ -118,6 +44,14 @@ ja:
   button_add:    "追加"
   button_change: "変更"
   
+  message_select_menu_category: "カテゴリを選択"
+  message_select_food_group:    "食品群を選択"
+  
+  menu_food_groups:     "食品群編集"
+  menu_foods:           "食品一覧"
+  menu_menus:           "メニュー"
+  menu_menu_categories: "メニューカテゴリー編集"
+  
   listing_food_groups:     "食品郡一覧"
   listing_foods:           "食品一覧"
   listing_foodstuffs:      "材料一覧"
@@ -126,6 +60,7 @@ ja:
   
   field_search_result:                      "検索結果: %{count}件"
   field_menu_category:                      "カテゴリ"
+  field_menu_category_name:                 "カテゴリ名"
   field_menu_name:                          "メニュー"
   field_menu_description:                   "説明"
   field_menu_image:                         "メニューの写真"

@@ -1,13 +1,34 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- */
+#header {
+  background-color: #F83E5B;
+  min-height: 5.3em;
+  margin: 0;
+  color: #f8f8f8; 
+  padding: 4px 8px 20px 6px; 
+  position:relative;
+}
+#header a {color:#f8f8f8;}
+#header h1 a.ancestor { font-size: 80%; }
+
+h1.headline {background-color: #FF8940; padding: 5px; width: 80%;}
+h2.headline {background-color: #DF38B1; padding: 5px; width: 60%;}
+h3.headline {background-color: #6BEC3B; padding: 5px; width: 60%;}
+
+#main-menu {position: absolute;  bottom: 0px;  left:6px; margin-right: -500px;}
+#main-menu ul {margin: 0;  padding: 0;}
+#main-menu li {
+  float:left;
+  list-style-type:none;
+  margin: 0px 2px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  white-space:nowrap;
+}
+#main-menu li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0;
+  padding: 4px 10px 4px 10px;
+}
+#main-menu li a:hover {background:#759FCF; color:#fff;}
+#main-menu li a.selected, #main-menu li a.selected:hover {background:#fff; color:#555;}

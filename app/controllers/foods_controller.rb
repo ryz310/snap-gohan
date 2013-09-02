@@ -7,6 +7,7 @@ class FoodsController < ApplicationController
     p = params[:target] || Hash.new
     @group_id = p[:group] || FoodGroup.first.id
     @size     = p[:size ] || 10
+    @food_group_name = FoodGroup.find(@group_id).name
     
     food_condition = Food
                       .where(food_group_id: @group_id)
