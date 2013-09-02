@@ -34,6 +34,23 @@
     <% end %>
     <%= f.file_field :image %>
   </div>
+  
+  <div style="padding: 10px; margin: 3px; border: 1px solid #666666; width: 30%;">
+	  <%= fields_for(@menu.foodstuffs.first) do |f2| %>
+		  <div class="field">
+		  	<%= f2.label t(:field_menu_foodstuffs) %><br>
+		  	<%= form_tag({controller: controller_name, action: action_name}, method: :get, id: 'test1', remote: true) do %>
+					<%= collection_select :target, :group, FoodGroup.all.order(:number), :id, :name, include_blank: true %>
+		  	<% end %>
+		  	<%= f2.select :food_id, {} %>
+		  </div>
+		  <div class="field">
+		  	<%= f2.label t(:field_food_amout) %><br>
+		  	<%= f2.text_field :amount %>
+		  </div>
+	  <% end %>
+  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>
