@@ -61,7 +61,7 @@ ja:
   field_search_result:                      "検索結果: %{count}件"
   field_menu_category:                      "カテゴリ"
   field_menu_category_name:                 "カテゴリ名"
-  field_menu_name:                          "メニュー"
+  field_menu_name:                          "メニュー名"
   field_menu_description:                   "説明"
   field_menu_image:                         "メニューの写真"
   field_menu_foodstuffs:                    "材料一覧"
