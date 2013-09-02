@@ -15,15 +15,15 @@
 </p>
 
 <p>
-  <strong><%= t :field_menu_description%>:</strong>
+  <strong><%= t :field_menu_description %>:</strong>
   <%= @menu.description %>
 </p>
 
 <p>
-  <strong><%= t :field_menu_foodstuffs%>:</strong>
+  <strong><%= t :field_menu_foodstuffs %>:</strong>
   <ul>
   <%- @menu.foodstuffs.each do |f| -%>
-    <li><%= "#{f.food.name}: #{f.amount}[g]" %></li>
+    <li><%= "#{f.food.subdivision}: #{f.amount}[g]" %></li>
   <%- end -%>
   </ul>
 </p>
