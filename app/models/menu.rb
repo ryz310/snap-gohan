@@ -6,5 +6,5 @@ class Menu < ActiveRecord::Base
   
   mount_uploader :image, MenuImageUploader
   validates :name,  presence: true
-  validates :image, file_size: {maximum: 1024.kilobytes.to_i}
+  validates :image, file_size: {maximum: 512.kilobytes.to_i}
 end
