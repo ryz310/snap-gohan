@@ -3,6 +3,8 @@ class Menu < ActiveRecord::Base
   
   has_many :foodstuffs, dependent: :destroy
   has_many :foods, through: :foodstuffs
+  accepts_nested_attributes_for :foodstuffs, allow_destroy: true,
+    reject_if: lambda{ |attrs| attrs[:food_id].blank? }
   
   mount_uploader :image, MenuImageUploader
   validates :name,  presence: true
