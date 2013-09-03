@@ -35,7 +35,7 @@
     <%= f.file_field :image %>
   </div>
   
-  <div class="fields" style="padding: 10px; margin: 3px; border: 1px solid #666666; width: 50%;">
+  <div class="field_box">
     <%= f.label t(:field_menu_foodstuffs) %><br>
     <ul id="foodstuffs">
       <%= f.fields_for :foodstuffs do |foodstuff| %>

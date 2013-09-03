@@ -1,6 +1,7 @@
 class MenusController < ApplicationController
-  before_action :set_menu, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_menu,        only: [:show, :edit, :update, :destroy]
+  before_action :set_food_groups, only: [:edit, :new]
+    
   # GET /menus
   # GET /menus.json
   def index
@@ -50,7 +51,7 @@ class MenusController < ApplicationController
       end
     end
   end
-
+  
   # PATCH/PUT /menus/1
   # PATCH/PUT /menus/1.json
   def update
@@ -75,12 +76,25 @@ class MenusController < ApplicationController
     end
   end
 
+  # GET /menus/update_food_select
+  def update_food_select
+    @group_id = params[:group_id] || FoodGroup.first.id
+    respond_to do |format|
+      format.html { render partial: 'update_food_select', locals: {group_id: @group_id} }
+    end
+  end
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_menu
       @menu = Menu.find(params[:id])
     end
 
+    #
+    def set_food_groups
+      @food_groups = FoodGroup.all
+    end
+    
     # Never trust parameters from the scary internet, only allow the white list through.
     def menu_params
       params.require(:menu).permit(

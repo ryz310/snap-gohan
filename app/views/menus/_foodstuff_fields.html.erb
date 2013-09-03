@@ -1,6 +1,15 @@
 <li class="fields">
+	<%- selected_group_id = f.object.food.food_group_id unless f.object.food.nil? -%>
+	<%- selected_group_id ||= FoodGroup.first.id -%>
+	
   <%= f.hidden_field :id %>
-  <%= f.collection_select :food_id, Food.limit(100), :id, :subdivision, selected: f.object.food_id %>
+  <%= select_tag "food_group_id_#{f.index}", 
+  				options_from_collection_for_select(@food_groups, :id, :name, selected_group_id),
+  				onchange: "update_food_select(this, this.value, '#{url_for action: 'update_food_select', only_path: false}');" %>
+  <%= f.collection_select :food_id, 
+  				Food.where(food_group_id: selected_group_id), :id, :subdivision,
+  				{selected: f.object.food_id},
+  				{class: "selectbox_food"} %>
   <%= f.text_field :amount, maxlength: 10 %>[g]
   <%= link_to_remove_fields t(:button_delete), f %>
 </li>

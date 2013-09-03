@@ -24,3 +24,16 @@ function add_fields(link, association, content, target) {
   var regexp = new RegExp("new_" + association, "g");
   $(target).append(content.replace(regexp, new_id));
 }
+
+function update_food_select(link, group_id, server) {
+  $.ajax({
+    url:  server,
+    type: "GET",
+    data: {"group_id" : group_id},
+    dataType: "html",
+    success: function(ajax) {
+      $(link).next("select").empty();
+      $(link).next("select").html(ajax);
+    }
+  });
+}

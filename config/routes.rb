@@ -5,7 +5,11 @@ SnapGohan::Application.routes.draw do
 
   resources :foodstuffs
 
-  resources :menus
+  resources :menus do
+    collection do
+      get 'update_food_select'
+    end
+  end
 
   resources :menu_categories
 

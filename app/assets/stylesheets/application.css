@@ -35,4 +35,6 @@ h3.headline {background-color: #6BEC3B; padding: 5px; width: 60%;}
 #main-menu li a:hover {background:#759FCF; color:#fff;}
 #main-menu li a.selected, #main-menu li a.selected:hover {background:#fff; color:#555;}
 
-.menu-image img { background-color: white; padding: 5px; border: #BBBBBB 1px solid;}
+.menu-image img { background-color: white; padding: 5px; border: #BBBBBB 1px solid; }
+.field_box      { padding: 10px; margin: 3px; border: 1px solid #666666; width: 60%; }
+.selectbox_food { width: 50%; }
