@@ -34,7 +34,7 @@
   <tbody>
     <% @menus.each do |menu| %>
       <tr>
-        <td><%= image_tag menu.image_url(:thumb).to_s if menu.image? %></td>
+        <td class="menu-image"><%= image_tag menu.image.url(:thumb).to_s if menu.image? %></td>
         <td><%= menu.name %></td>
         <td><%= menu.description %></td>
         <td>
