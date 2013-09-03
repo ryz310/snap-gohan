@@ -1,6 +1,6 @@
 class MenusController < ApplicationController
   before_action :set_menu,        only: [:show, :edit, :update, :destroy]
-  before_action :set_food_groups, only: [:edit, :new]
+  before_action :set_food_groups, only: [:edit, :update, :new, :create]
     
   # GET /menus
   # GET /menus.json
