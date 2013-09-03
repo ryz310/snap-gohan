@@ -1,13 +1,17 @@
 <style>
-	.picture_tile { margin: 50px 0px;	}
+  .picture_tile { margin: 50px 0px; }
 </style>
 
 <table class="picture_tile">
-	<tbody>
-		<tr>
-			<% @pictures.each do |p| %>
-				<td class="menu-image"><%= image_tag p.image.url(:thumb).to_s %></td>
-			<% end %>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <% @pictures.each_with_index do |p, i| %>
+      <td class="menu-image"><%= image_tag p %></td>
+      <%- if i % 5 == 4 -%>
+    </tr>
+    <tr>
+      <%- end -%>
+      <% end %>
+    </tr>
+  </tbody>
 </table>
