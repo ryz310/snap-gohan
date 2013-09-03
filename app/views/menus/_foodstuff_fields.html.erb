@@ -7,7 +7,10 @@
   				options_from_collection_for_select(@food_groups, :id, :name, selected_group_id),
   				onchange: "update_food_select(this, this.value, '#{url_for action: 'update_food_select', only_path: false}');" %>
   <%= f.collection_select :food_id, 
-  				Food.where(food_group_id: selected_group_id), :id, :subdivision,
+  				Food
+  				  .where(food_group_id: selected_group_id)
+  				  .select(:id, :subdivision), 
+				  :id, :subdivision,
   				{selected: f.object.food_id},
   				{class: "selectbox_food"} %>
   <%= f.text_field :amount, maxlength: 10 %>[g]
