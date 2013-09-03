@@ -9,8 +9,8 @@
   <%= f.collection_select :food_id, 
   				Food
   				  .where(food_group_id: selected_group_id)
-  				  .select(:id, :subdivision), 
-				  :id, :subdivision,
+  				  .select(:id, :classification, :subdivision), 
+				  :id, :full_name,
   				{selected: f.object.food_id},
   				{class: "selectbox_food"} %>
   <%= f.text_field :amount, maxlength: 10 %>[g]

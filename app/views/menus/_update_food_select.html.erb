@@ -1,4 +1,4 @@
 <%= options_from_collection_for_select Food
                                           .where(food_group_id: group_id)
-                                          .select(:id, :subdivision), 
-                                       :id, :subdivision %>
+                                          .select(:id, :classification, :subdivision), 
+                                       :id, :full_name %>

@@ -3,4 +3,8 @@ class Food < ActiveRecord::Base
   
   has_many :foodstuffs, dependent: :destroy
   has_many :menus, through: :foodstuffs
+  
+  def full_name
+    "#{self.classification} : #{self.subdivision}"  
+  end
 end
