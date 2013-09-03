@@ -47,6 +47,7 @@ ja:
   message_select_menu_category: "カテゴリを選択"
   message_select_food_group:    "食品群を選択"
   
+  menu_toppage:         "ホーム"
   menu_food_groups:     "食品群編集"
   menu_foods:           "食品一覧"
   menu_menus:           "メニュー"

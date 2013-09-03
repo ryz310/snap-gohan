@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SnapGohan</title>
+  <title>Snap Gohan</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -11,8 +11,9 @@
     <h1>Snap Gohan</h1>
     <div id="main-menu">
       <ul>
-        <li><%= link_to t(:menu_menus), menus_path %></li>
-        <li><%= link_to t(:menu_foods), foods_path %></li>
+      	<li><%= link_to t(:menu_toppage), root_path%></li>
+        <li><%= link_to t(:menu_menus),   menus_path %></li>
+        <li><%= link_to t(:menu_foods),   foods_path %></li>
         <li><%= link_to t(:menu_food_groups    ), food_groups_path %></li>
         <li><%= link_to t(:menu_menu_categories), menu_categories_path %></li>
       </ul>
