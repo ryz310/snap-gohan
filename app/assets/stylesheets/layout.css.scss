@@ -1,7 +1,11 @@
-$color1: #FCFADF;
+$bg-color: #FCFADF;
+$color1: #F83E5B;
+$color2: #FF8940;
+$color3: #DF38B1;
+$color4: #6BEC3B; 
 
 body {
-  background-color: $color1;
+  background-color: $bg-color;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -9,7 +13,7 @@ body {
 }
 
 #header {
-  background-color: #F83E5B;
+  background-color: $color1;
   min-height: 5.3em;
   margin: 0;
   color: #f8f8f8;
@@ -24,25 +28,25 @@ body {
 }
 
 h1.headline {
-  background-color: #FF8940;
+  background-color: $color2;
   padding: 5px;
   width: 85%;
 }
 
 h2.headline {
-  background-color: #DF38B1;
+  background-color: $color3;
   padding: 5px;
   width: 70%;
 }
 
 h3.headline {
-  background-color: #6BEC3B;
+  background-color: $color4;
   padding: 5px;
   width: 60%;
 }
 
 th {
-  background-color: #6BEC3B;
+  background-color: $color4;
 }
 
 p, ol, ul, td {
