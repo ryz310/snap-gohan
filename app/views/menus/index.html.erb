@@ -16,7 +16,7 @@
 
 <h2 class="headline"><%= @category_name %></h2>
 
-<p class="paginate"><%= paginate @menus %></p>
+<p><%= paginate @menus %></p>
 
 <table>
   <thead>
@@ -52,6 +52,6 @@
   </tbody>
 </table>
 
-<p class="paginate"><%= paginate @menus %></p>
+<p><%= paginate @menus %></p>
 
 <%= link_to 'New Menu', new_menu_path(cayegory_id: @category_id) %>
