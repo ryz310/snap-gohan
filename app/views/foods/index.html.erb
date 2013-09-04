@@ -22,8 +22,8 @@
   <table>
     <thead>
       <tr>
-        <th><%= t :field_food_number %></th>
-        <th><%= t :field_food_name %></th>
+        <th class="text"><%= t :field_food_number %></th>
+        <th class="text"><%= t :field_food_name %></th>
         <th><%= t :field_refuse %></th>
         <th><%= t :field_energy %></th>
         <th><%= t :field_energy_kj %></th>
@@ -85,9 +85,9 @@
     <tbody>
       <% @foods.each do |food| %>
         <tr>
-          <td><%= food.number %></td>
-          <td><%= food.full_name %></td>
-          <td><%= food.refuse %></td>
+          <td class="text"><%= food.number %></td>
+          <td class="text"><%= food.full_name %></td>
+          <td><%= food.refuse_percentage %></td>
           <td><%= food.energy %></td>
           <td><%= food.energy_kj %></td>
           <td><%= food.water %></td>
