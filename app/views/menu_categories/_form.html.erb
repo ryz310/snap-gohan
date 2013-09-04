@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.label t(:field_menu_category_name) %><br>
+    <%= f.text_field :name, maxlength: 64 %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.label t(:field_menu_description) %><br>
+    <%= f.text_area :description, maxlength: 1024, size: "50x5" %>
   </div>
   <div class="actions">
     <%= f.submit %>

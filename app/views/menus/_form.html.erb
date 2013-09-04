@@ -17,11 +17,11 @@
   </div>
   <div class="field">
     <%= f.label t(:field_menu_name) %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, maxlength: 64 %>
   </div>
   <div class="field">
     <%= f.label t(:field_menu_description) %><br>
-    <%= f.text_field :description %>
+    <%= f.text_area :description, maxlength: 1024, size: "50x5" %>
   </div>
   <div class="field">
     <%= f.label t(:field_menu_image) %><br>
