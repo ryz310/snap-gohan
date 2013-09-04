@@ -2,154 +2,152 @@
 
 <div class="select_form">
   <%= form_tag({controller: controller_name, action: action_name}, method: :get, id: 'query_form') do %>
-  	<p class="hide-when-print">
-  	  <%= t :message_select_food_group %>
-  		<%= collection_select :target, :group, FoodGroup.all.order(:number), :id, :name,  selected: @group_id %>
-  		<%= select            :target, :size,  {"10件" => 10, "20件" => 20, "30件" => 30, "50件" => 50}, selected: @size %>
+    <p class="hide-when-print">
+      <%= t :message_select_food_group %>
+      <%= collection_select :target, :group, FoodGroup.all.order(:number), :id, :name,  selected: @group_id %>
+      <%= select            :target, :size,  {"10件" => 10, "20件" => 20, "30件" => 30, "50件" => 50}, selected: @size %>
   
-  	  <%= link_to_function t(:button_apply), '$("#query_form").submit()', class: 'icon icon-checked' %>
-  		<%= link_to t(:button_clear), {controller: controller_name, action: action_name}, class: 'icon icon-reload' %>
-  	</p>
+      <%= link_to_function t(:button_apply), '$("#query_form").submit()', class: 'icon icon-checked' %>
+      <%= link_to t(:button_clear), {controller: controller_name, action: action_name}, class: 'icon icon-reload' %>
+    </p>
   <% end %>
   <p><%= t :field_search_result, count: @foods_count %></p>
 </div>
 
 <h2 class="headline"><%= @food_group_name %></h2>
 
-<p class="paginate"><%= paginate @foods %></p>
+<p><%= paginate @foods %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th><%= t :field_food_number %></th>
-      <th><%= t :field_classification %></th>
-      <th><%= t :field_subdivision %></th>
-      <th><%= t :field_food_name %></th>
-      <th><%= t :field_refuse %></th>
-      <th><%= t :field_energy %></th>
-      <th><%= t :field_energy_kj %></th>
-      <th><%= t :field_water %></th>
-      <th><%= t :field_protein %></th>
-      <th><%= t :field_protein_sum_of_amino_acid_residuse %></th>
-      <th><%= t :field_lipid %></th>
-      <th><%= t :field_triacylglycerol_equivalents %></th>
-      <th><%= t :field_carbohydrate %></th>
-      <th><%= t :field_ash %></th>
-      <th><%= t :field_sodium %></th>
-      <th><%= t :field_potassium %></th>
-      <th><%= t :field_calcium %></th>
-      <th><%= t :field_magnesium %></th>
-      <th><%= t :field_phosphorus %></th>
-      <th><%= t :field_iron %></th>
-      <th><%= t :field_zinc %></th>
-      <th><%= t :field_copper %></th>
-      <th><%= t :field_manganese %></th>
-      <th><%= t :field_iodine %></th>
-      <th><%= t :field_selenium %></th>
-      <th><%= t :field_chromium %></th>
-      <th><%= t :field_molybdenum %></th>
-      <th><%= t :field_retinol %></th>
-      <th><%= t :field_alpha_carotenes %></th>
-      <th><%= t :field_beta_carotenes %></th>
-      <th><%= t :field_beta_cryptoxanthin %></th>
-      <th><%= t :field_bata_carotene_equivalents %></th>
-      <th><%= t :field_retinol_activity_equivalents %></th>
-      <th><%= t :field_vitamind %></th>
-      <th><%= t :field_alpha_tocopherols %></th>
-      <th><%= t :field_beta_tocopherols %></th>
-      <th><%= t :field_gamma_tocopherols %></th>
-      <th><%= t :field_delta_tocopherols %></th>
-      <th><%= t :field_vitamink %></th>
-      <th><%= t :field_thiamin %></th>
-      <th><%= t :field_riboflavin %></th>
-      <th><%= t :field_niacin %></th>
-      <th><%= t :field_vitaminb6 %></th>
-      <th><%= t :field_vitaminb12 %></th>
-      <th><%= t :field_folate %></th>
-      <th><%= t :field_pantothenic_acid %></th>
-      <th><%= t :field_biotin %></th>
-      <th><%= t :field_ascorbic_acid %></th>
-      <th><%= t :field_saturated_fatty_acids %></th>
-      <th><%= t :field_monounsaturated_fatty_acids %></th>
-      <th><%= t :field_polyunsaturated_fatty_acids %></th>
-      <th><%= t :field_cholesterol %></th>
-      <th><%= t :field_soluble_dietary_fibers %></th>
-      <th><%= t :field_insoluble_dietary_fibers %></th>
-      <th><%= t :field_total_dietary_fibers %></th>
-      <th><%= t :field_salt_equivalents %></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @foods.each do |food| %>
+<div class="food-list">
+  <table>
+    <thead>
       <tr>
-        <td><%= food.number %></td>
-        <td><%= food.classification %></td>
-        <td><%= food.subdivision %></td>
-        <td><%= food.name %></td>
-        <td><%= food.refuse %></td>
-        <td><%= food.energy %></td>
-        <td><%= food.energy_kj %></td>
-        <td><%= food.water %></td>
-        <td><%= food.protein %></td>
-        <td><%= food.protein_sum_of_amino_acid_residuse %></td>
-        <td><%= food.lipid %></td>
-        <td><%= food.triacylglycerol_equivalents %></td>
-        <td><%= food.carbohydrate %></td>
-        <td><%= food.ash %></td>
-        <td><%= food.sodium %></td>
-        <td><%= food.potassium %></td>
-        <td><%= food.calcium %></td>
-        <td><%= food.magnesium %></td>
-        <td><%= food.phosphorus %></td>
-        <td><%= food.iron %></td>
-        <td><%= food.zinc %></td>
-        <td><%= food.copper %></td>
-        <td><%= food.manganese %></td>
-        <td><%= food.iodine %></td>
-        <td><%= food.selenium %></td>
-        <td><%= food.chromium %></td>
-        <td><%= food.molybdenum %></td>
-        <td><%= food.retinol %></td>
-        <td><%= food.alpha_carotenes %></td>
-        <td><%= food.beta_carotenes %></td>
-        <td><%= food.beta_cryptoxanthin %></td>
-        <td><%= food.bata_carotene_equivalents %></td>
-        <td><%= food.retinol_activity_equivalents %></td>
-        <td><%= food.vitamind %></td>
-        <td><%= food.alpha_tocopherols %></td>
-        <td><%= food.beta_tocopherols %></td>
-        <td><%= food.gamma_tocopherols %></td>
-        <td><%= food.delta_tocopherols %></td>
-        <td><%= food.vitamink %></td>
-        <td><%= food.thiamin %></td>
-        <td><%= food.riboflavin %></td>
-        <td><%= food.niacin %></td>
-        <td><%= food.vitaminb6 %></td>
-        <td><%= food.vitaminb12 %></td>
-        <td><%= food.folate %></td>
-        <td><%= food.pantothenic_acid %></td>
-        <td><%= food.biotin %></td>
-        <td><%= food.ascorbic_acid %></td>
-        <td><%= food.saturated_fatty_acids %></td>
-        <td><%= food.monounsaturated_fatty_acids %></td>
-        <td><%= food.polyunsaturated_fatty_acids %></td>
-        <td><%= food.cholesterol %></td>
-        <td><%= food.soluble_dietary_fibers %></td>
-        <td><%= food.insoluble_dietary_fibers %></td>
-        <td><%= food.total_dietary_fibers %></td>
-        <td><%= food.salt_equivalents %></td>
-        <td><%= link_to 'Show', food %></td>
-        <td><%= link_to 'Edit', edit_food_path(food) %></td>
-        <td><%= link_to 'Destroy', food, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th><%= t :field_food_number %></th>
+        <th><%= t :field_food_name %></th>
+        <th><%= t :field_refuse %></th>
+        <th><%= t :field_energy %></th>
+        <th><%= t :field_energy_kj %></th>
+        <th><%= t :field_water %></th>
+        <th><%= t :field_protein %></th>
+        <th><%= t :field_protein_sum_of_amino_acid_residuse %></th>
+        <th><%= t :field_lipid %></th>
+        <th><%= t :field_triacylglycerol_equivalents %></th>
+        <th><%= t :field_carbohydrate %></th>
+        <th><%= t :field_ash %></th>
+        <th><%= t :field_sodium %></th>
+        <th><%= t :field_potassium %></th>
+        <th><%= t :field_calcium %></th>
+        <th><%= t :field_magnesium %></th>
+        <th><%= t :field_phosphorus %></th>
+        <th><%= t :field_iron %></th>
+        <th><%= t :field_zinc %></th>
+        <th><%= t :field_copper %></th>
+        <th><%= t :field_manganese %></th>
+        <th><%= t :field_iodine %></th>
+        <th><%= t :field_selenium %></th>
+        <th><%= t :field_chromium %></th>
+        <th><%= t :field_molybdenum %></th>
+        <th><%= t :field_retinol %></th>
+        <th><%= t :field_alpha_carotenes %></th>
+        <th><%= t :field_beta_carotenes %></th>
+        <th><%= t :field_beta_cryptoxanthin %></th>
+        <th><%= t :field_bata_carotene_equivalents %></th>
+        <th><%= t :field_retinol_activity_equivalents %></th>
+        <th><%= t :field_vitamind %></th>
+        <th><%= t :field_alpha_tocopherols %></th>
+        <th><%= t :field_beta_tocopherols %></th>
+        <th><%= t :field_gamma_tocopherols %></th>
+        <th><%= t :field_delta_tocopherols %></th>
+        <th><%= t :field_vitamink %></th>
+        <th><%= t :field_thiamin %></th>
+        <th><%= t :field_riboflavin %></th>
+        <th><%= t :field_niacin %></th>
+        <th><%= t :field_vitaminb6 %></th>
+        <th><%= t :field_vitaminb12 %></th>
+        <th><%= t :field_folate %></th>
+        <th><%= t :field_pantothenic_acid %></th>
+        <th><%= t :field_biotin %></th>
+        <th><%= t :field_ascorbic_acid %></th>
+        <th><%= t :field_saturated_fatty_acids %></th>
+        <th><%= t :field_monounsaturated_fatty_acids %></th>
+        <th><%= t :field_polyunsaturated_fatty_acids %></th>
+        <th><%= t :field_cholesterol %></th>
+        <th><%= t :field_soluble_dietary_fibers %></th>
+        <th><%= t :field_insoluble_dietary_fibers %></th>
+        <th><%= t :field_total_dietary_fibers %></th>
+        <th><%= t :field_salt_equivalents %></th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+  
+    <tbody>
+      <% @foods.each do |food| %>
+        <tr>
+          <td><%= food.number %></td>
+          <td><%= food.full_name %></td>
+          <td><%= food.refuse %></td>
+          <td><%= food.energy %></td>
+          <td><%= food.energy_kj %></td>
+          <td><%= food.water %></td>
+          <td><%= food.protein %></td>
+          <td><%= food.protein_sum_of_amino_acid_residuse %></td>
+          <td><%= food.lipid %></td>
+          <td><%= food.triacylglycerol_equivalents %></td>
+          <td><%= food.carbohydrate %></td>
+          <td><%= food.ash %></td>
+          <td><%= food.sodium %></td>
+          <td><%= food.potassium %></td>
+          <td><%= food.calcium %></td>
+          <td><%= food.magnesium %></td>
+          <td><%= food.phosphorus %></td>
+          <td><%= food.iron %></td>
+          <td><%= food.zinc %></td>
+          <td><%= food.copper %></td>
+          <td><%= food.manganese %></td>
+          <td><%= food.iodine %></td>
+          <td><%= food.selenium %></td>
+          <td><%= food.chromium %></td>
+          <td><%= food.molybdenum %></td>
+          <td><%= food.retinol %></td>
+          <td><%= food.alpha_carotenes %></td>
+          <td><%= food.beta_carotenes %></td>
+          <td><%= food.beta_cryptoxanthin %></td>
+          <td><%= food.bata_carotene_equivalents %></td>
+          <td><%= food.retinol_activity_equivalents %></td>
+          <td><%= food.vitamind %></td>
+          <td><%= food.alpha_tocopherols %></td>
+          <td><%= food.beta_tocopherols %></td>
+          <td><%= food.gamma_tocopherols %></td>
+          <td><%= food.delta_tocopherols %></td>
+          <td><%= food.vitamink %></td>
+          <td><%= food.thiamin %></td>
+          <td><%= food.riboflavin %></td>
+          <td><%= food.niacin %></td>
+          <td><%= food.vitaminb6 %></td>
+          <td><%= food.vitaminb12 %></td>
+          <td><%= food.folate %></td>
+          <td><%= food.pantothenic_acid %></td>
+          <td><%= food.biotin %></td>
+          <td><%= food.ascorbic_acid %></td>
+          <td><%= food.saturated_fatty_acids %></td>
+          <td><%= food.monounsaturated_fatty_acids %></td>
+          <td><%= food.polyunsaturated_fatty_acids %></td>
+          <td><%= food.cholesterol %></td>
+          <td><%= food.soluble_dietary_fibers %></td>
+          <td><%= food.insoluble_dietary_fibers %></td>
+          <td><%= food.total_dietary_fibers %></td>
+          <td><%= food.salt_equivalents %></td>
+          <td><%= link_to 'Show', food %></td>
+          <td><%= link_to 'Edit', edit_food_path(food) %></td>
+          <td><%= link_to 'Destroy', food, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 
-<p class="paginate"><%= paginate @foods %></p>
+<p><%= paginate @foods %></p>
 
 <%= link_to 'New Food', new_food_path %>
