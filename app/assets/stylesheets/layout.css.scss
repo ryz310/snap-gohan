@@ -49,6 +49,16 @@ th {
   background-color: $color4;
 }
 
+table.list {
+  width: 70%;
+  .center {
+    text-align: center;
+  }
+  td {
+    padding: 0 5px;
+  }
+}
+
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -158,4 +168,3 @@ div {
 .pagination {
   text-align: center;
 }
-

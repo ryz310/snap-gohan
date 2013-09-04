@@ -1,10 +1,10 @@
 <h1 class="headline"><%= t :listing_menu_categories %></h1>
 
-<table>
+<table class="list">
   <thead>
     <tr>
-      <th><%= t :field_menu_category_name %></th>
-      <th><%= t :field_menu_description %></th>
+      <th class="field_menu_category_name"><%= t :field_menu_category_name %></th>
+      <th class="field_menu_description"><%= t :field_menu_description %></th>
       <th></th>
       <th></th>
       <th></th>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= menu_category.name %></td>
         <td><%= menu_category.description %></td>
-        <td><%= link_to 'Show', menu_category %></td>
-        <td><%= link_to 'Edit', edit_menu_category_path(menu_category) %></td>
-        <td><%= link_to 'Destroy', menu_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="center"><%= link_to 'Show', menu_category %></td>
+        <td class="center"><%= link_to 'Edit', edit_menu_category_path(menu_category) %></td>
+        <td class="center"><%= link_to 'Destroy', menu_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
