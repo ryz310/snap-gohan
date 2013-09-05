@@ -11,6 +11,6 @@ class Food < ActiveRecord::Base
   
   #
   def refuse_percentage
-    self.refuse * 100
+    (self.refuse * 100).round
   end
 end
