@@ -4,7 +4,16 @@
   border: 1px solid #666666;
   width: 60%;
 }
-
 .selectbox_food {
   width: 50%;
+}
+.field_menu_name {
+  width: 12%;
+}
+.field_menu_foodstuffs {
+  width: 30%;
+  ul {
+    margin: 0 0 0 1em;
+    padding-left: 5px;
+  }
 }

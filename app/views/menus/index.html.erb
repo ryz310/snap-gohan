@@ -22,11 +22,9 @@
   <thead>
     <tr>
       <th><%= t :field_menu_image %></th>
-      <th><%= t :field_menu_name %></th>
+      <th class="field_menu_name"><%= t :field_menu_name %></th>
       <th><%= t :field_menu_description %></th>
-      <th><%= t :field_menu_foodstuffs %></th>
-      <th></th>
-      <th></th>
+      <th class="field_menu_foodstuffs"><%= t :field_menu_foodstuffs %></th>
       <th></th>
     </tr>
   </thead>
@@ -37,16 +35,18 @@
         <td class="menu-image"><%= image_tag menu.image.url(:thumb).to_s if menu.image? %></td>
         <td><%= menu.name %></td>
         <td><%= menu.description %></td>
-        <td>
+        <td class="field_menu_foodstuffs">
           <ul>
           <%- menu.foodstuffs.each do |f| -%>
             <li><%= "#{f.food.full_name}: #{f.amount}[g]" %></li>
           <%- end -%>
           </ul>
     	</td>
-        <td><%= link_to 'Show', menu %></td>
-        <td><%= link_to 'Edit', edit_menu_path(menu) %></td>
-        <td><%= link_to 'Destroy', menu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      	<td>
+          <%= link_to 'Show', menu %><br />
+          <%= link_to 'Edit', edit_menu_path(menu) %><br />
+          <%= link_to 'Destroy', menu, method: :delete, data: { confirm: 'Are you sure?' } %><br />
+        </td>
       </tr>
     <% end %>
   </tbody>
