@@ -4,8 +4,11 @@ ruby "2.0.0"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use sqlite3 as the database for Active Record
+# Use PostgreSql as the database for Active Record
 gem 'pg'
+
+# Use Sqlite3 as the database for Active Record
+# gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -36,11 +39,14 @@ end
 # Auto paging library.
 gem 'kaminari'
 
+# Cloud Image Strage Service.
+gem 'cloudinary'
+
 # File upload library.
 gem 'carrierwave'
 
 # A ruby wrapper for ImageMagick or GraphicsMagick command line 
-gem 'mini_magick', '3.5.0'
+# gem 'mini_magick', '3.5.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

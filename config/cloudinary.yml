@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: howrowfvo
+  api_key: '944547546733351'
+  api_secret: jNK8W0j1Nj3NIQkxAxJ-HD-fXms
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: howrowfvo
+  api_key: '944547546733351'
+  api_secret: jNK8W0j1Nj3NIQkxAxJ-HD-fXms
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: howrowfvo
+  api_key: '944547546733351'
+  api_secret: jNK8W0j1Nj3NIQkxAxJ-HD-fXms
+  enhance_image_tag: true
+  static_image_support: false
