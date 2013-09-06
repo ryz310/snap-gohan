@@ -16,11 +16,7 @@ class WelcomeController < ApplicationController
                     .where("image is not null")
                     .select(:id, :image)
                     .map { |p|
-                      p.image.url(:thumb).to_s
-                    }
+                      p.image.url(:thumb).to_s if p.image?
+                    }.shuffle
   end
-  
-  private
-    def sample_pictures
-    end
 end
