@@ -7,7 +7,7 @@
       <%= collection_select :target, :category, MenuCategory.all, :id, :name,  selected: @category_id %>
       <%= select            :target, :size,  {"10件" => 10, "20件" => 20, "30件" => 30, "50件" => 50}, selected: @size %>
 
-      <%= link_to_function t(:button_apply), '$("#query_form").submit()', class: 'icon icon-checked' %>
+      <%= link_to t(:button_apply), "#", onclick: '$("#query_form").submit(); return false;', class: 'icon icon-checked' %>
       <%= link_to t(:button_clear), {controller: controller_name, action: action_name}, class: 'icon icon-reload' %>
     </p>
   <% end %>
