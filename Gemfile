@@ -15,6 +15,9 @@ end
 group :development, :test do
   # Use Sqlite3 as the database for Active Record
   gem 'sqlite3'
+  # Debuggin tools
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 # Use SCSS for stylesheets
