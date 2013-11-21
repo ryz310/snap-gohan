@@ -9,4 +9,18 @@ class Menu < ActiveRecord::Base
   mount_uploader :image, MenuImageUploader
   validates :name,  presence: true
   validates :image, file_size: {maximum: 2.megabytes}
+
+  # メニューの栄養価を取得する
+  def nutritions(*names)
+  	Hash.new.tap do |result|
+	  	names.each do |name|
+	  		result[name] = 0.0
+	  		self.foodstuffs.each do |stuff|
+          nutrition = stuff.food.public_send name
+          amount    = stuff.amount
+	  			result[name] += nutrition * amount / 100
+	  		end
+	  	end
+		end
+  end
 end
