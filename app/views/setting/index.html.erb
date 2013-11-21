@@ -1,0 +1,226 @@
+<h1>Setting#index</h1>
+<p>Find me in app/views/setting/index.html.erb</p>
+
+<%= form_for(@food_setting, url: {action: 'update'} ) do |f| %>
+	<table>
+		<thead>
+			<tr>
+				<th><%= t :field_name %></th>
+				<th><%= t :field_visible %></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="field">
+				<td><%= f.label t(:field_refuse) %></td>
+				<td><%= f.check_box :refuse, checked_value: 1.0, unchecked_value: 0.0 %></td>
+			</tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_energy) %></td>
+		    <td><%= f.check_box :energy, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_energy_kj) %></td>
+		    <td><%= f.check_box :energy_kj, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_water) %></td>
+		    <td><%= f.check_box :water, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_protein) %></td>
+		    <td><%= f.check_box :protein, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_protein_sum_of_amino_acid_residuse) %></td>
+		    <td><%= f.check_box :protein_sum_of_amino_acid_residuse, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_lipid) %></td>
+		    <td><%= f.check_box :lipid, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_triacylglycerol_equivalents) %></td>
+		    <td><%= f.check_box :triacylglycerol_equivalents, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_carbohydrate) %></td>
+		    <td><%= f.check_box :carbohydrate, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_ash) %></td>
+		    <td><%= f.check_box :ash, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_sodium) %></td>
+		    <td><%= f.check_box :sodium, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_potassium) %></td>
+		    <td><%= f.check_box :potassium, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_calcium) %></td>
+		    <td><%= f.check_box :calcium, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_magnesium) %></td>
+		    <td><%= f.check_box :magnesium, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_phosphorus) %></td>
+		    <td><%= f.check_box :phosphorus, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_iron) %></td>
+		    <td><%= f.check_box :iron, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_zinc) %></td>
+		    <td><%= f.check_box :zinc, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_copper) %></td>
+		    <td><%= f.check_box :copper, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_manganese) %></td>
+		    <td><%= f.check_box :manganese, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_iodine) %></td>
+		    <td><%= f.check_box :iodine, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_selenium) %></td>
+		    <td><%= f.check_box :selenium, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_chromium) %></td>
+		    <td><%= f.check_box :chromium, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_molybdenum) %></td>
+		    <td><%= f.check_box :molybdenum, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_retinol) %></td>
+		    <td><%= f.check_box :retinol, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_alpha_carotenes) %></td>
+		    <td><%= f.check_box :alpha_carotenes, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_beta_carotenes) %></td>
+		    <td><%= f.check_box :beta_carotenes, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_beta_cryptoxanthin) %></td>
+		    <td><%= f.check_box :beta_cryptoxanthin, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_bata_carotene_equivalents) %></td>
+		    <td><%= f.check_box :bata_carotene_equivalents, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_retinol_activity_equivalents) %></td>
+		    <td><%= f.check_box :retinol_activity_equivalents, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_vitamind) %></td>
+		    <td><%= f.check_box :vitamind, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_alpha_tocopherols) %></td>
+		    <td><%= f.check_box :alpha_tocopherols, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_beta_tocopherols) %></td>
+		    <td><%= f.check_box :beta_tocopherols, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_gamma_tocopherols) %></td>
+		    <td><%= f.check_box :gamma_tocopherols, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_delta_tocopherols) %></td>
+		    <td><%= f.check_box :delta_tocopherols, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_vitamink) %></td>
+		    <td><%= f.check_box :vitamink, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_thiamin) %></td>
+		    <td><%= f.check_box :thiamin, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_riboflavin) %></td>
+		    <td><%= f.check_box :riboflavin, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_niacin) %></td>
+		    <td><%= f.check_box :niacin, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_vitaminb6) %></td>
+		    <td><%= f.check_box :vitaminb6, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_vitaminb12) %></td>
+		    <td><%= f.check_box :vitaminb12, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_folate) %></td>
+		    <td><%= f.check_box :folate, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_pantothenic_acid) %></td>
+		    <td><%= f.check_box :pantothenic_acid, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_biotin) %></td>
+		    <td><%= f.check_box :biotin, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_ascorbic_acid) %></td>
+		    <td><%= f.check_box :ascorbic_acid, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_saturated_fatty_acids) %></td>
+		    <td><%= f.check_box :saturated_fatty_acids, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_monounsaturated_fatty_acids) %></td>
+		    <td><%= f.check_box :monounsaturated_fatty_acids, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_polyunsaturated_fatty_acids) %></td>
+		    <td><%= f.check_box :polyunsaturated_fatty_acids, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_cholesterol) %></td>
+		    <td><%= f.check_box :cholesterol, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_soluble_dietary_fibers) %></td>
+		    <td><%= f.check_box :soluble_dietary_fibers, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_insoluble_dietary_fibers) %></td>
+		    <td><%= f.check_box :insoluble_dietary_fibers, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_total_dietary_fibers) %></td>
+		    <td><%= f.check_box :total_dietary_fibers, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		  <tr class="field">
+		    <td><%= f.label t(:field_salt_equivalents) %></td>
+		    <td><%= f.check_box :salt_equivalents, checked_value: 1.0, unchecked_value: 0.0 %></td>
+		  </tr>
+		</tbody>
+	</table>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
