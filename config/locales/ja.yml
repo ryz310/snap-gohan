@@ -43,23 +43,25 @@ ja:
   button_create: "作成"
   button_add:    "追加"
   button_change: "変更"
-  
+
   message_select_menu_category: "カテゴリを選択"
   message_select_food_group:    "食品群を選択"
-  
+
   menu_toppage:         "ホーム"
   menu_food_groups:     "食品群編集"
   menu_foods:           "食品一覧"
   menu_menus:           "メニュー"
   menu_menu_categories: "メニューカテゴリー編集"
-  
+  menu_setting:         "設定"
+
   listing_food_groups:     "食品郡一覧"
   listing_foods:           "食品一覧"
   listing_foodstuffs:      "材料一覧"
   listing_menu_categories: "メニューカテゴリ一覧"
   listing_menus:           "メニュー"
-  
+
   field_search_result:                      "検索結果: %{count}件"
+  field_visible_invisible:                  "表示／非表示"
   field_menu_category:                      "カテゴリ"
   field_menu_category_name:                 "カテゴリ名"
   field_menu_name:                          "メニュー名"
@@ -72,6 +74,7 @@ ja:
   field_classification:                     "大分類"
   field_subdivision:                        "中分類/小分類/細分"
   field_food_name:                          "食品名"
+  field_nutrient_name:                      "栄養素名"
   field_refuse:                             "廃棄率[%]"
   field_food_amout:                         "分量[g]"
   field_energy:                             "エネルギー[kcal]"

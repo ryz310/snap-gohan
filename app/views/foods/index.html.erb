@@ -24,58 +24,10 @@
       <tr>
         <th class="text"><%= t :field_food_number %></th>
         <th class="text"><%= t :field_food_name %></th>
-        <th><%= t :field_refuse %></th>
-        <th><%= t :field_energy %></th>
-        <th><%= t :field_energy_kj %></th>
-        <th><%= t :field_water %></th>
-        <th><%= t :field_protein %></th>
-        <th><%= t :field_protein_sum_of_amino_acid_residuse %></th>
-        <th><%= t :field_lipid %></th>
-        <th><%= t :field_triacylglycerol_equivalents %></th>
-        <th><%= t :field_carbohydrate %></th>
-        <th><%= t :field_ash %></th>
-        <th><%= t :field_sodium %></th>
-        <th><%= t :field_potassium %></th>
-        <th><%= t :field_calcium %></th>
-        <th><%= t :field_magnesium %></th>
-        <th><%= t :field_phosphorus %></th>
-        <th><%= t :field_iron %></th>
-        <th><%= t :field_zinc %></th>
-        <th><%= t :field_copper %></th>
-        <th><%= t :field_manganese %></th>
-        <th><%= t :field_iodine %></th>
-        <th><%= t :field_selenium %></th>
-        <th><%= t :field_chromium %></th>
-        <th><%= t :field_molybdenum %></th>
-        <th><%= t :field_retinol %></th>
-        <th><%= t :field_alpha_carotenes %></th>
-        <th><%= t :field_beta_carotenes %></th>
-        <th><%= t :field_beta_cryptoxanthin %></th>
-        <th><%= t :field_bata_carotene_equivalents %></th>
-        <th><%= t :field_retinol_activity_equivalents %></th>
-        <th><%= t :field_vitamind %></th>
-        <th><%= t :field_alpha_tocopherols %></th>
-        <th><%= t :field_beta_tocopherols %></th>
-        <th><%= t :field_gamma_tocopherols %></th>
-        <th><%= t :field_delta_tocopherols %></th>
-        <th><%= t :field_vitamink %></th>
-        <th><%= t :field_thiamin %></th>
-        <th><%= t :field_riboflavin %></th>
-        <th><%= t :field_niacin %></th>
-        <th><%= t :field_vitaminb6 %></th>
-        <th><%= t :field_vitaminb12 %></th>
-        <th><%= t :field_folate %></th>
-        <th><%= t :field_pantothenic_acid %></th>
-        <th><%= t :field_biotin %></th>
-        <th><%= t :field_ascorbic_acid %></th>
-        <th><%= t :field_saturated_fatty_acids %></th>
-        <th><%= t :field_monounsaturated_fatty_acids %></th>
-        <th><%= t :field_polyunsaturated_fatty_acids %></th>
-        <th><%= t :field_cholesterol %></th>
-        <th><%= t :field_soluble_dietary_fibers %></th>
-        <th><%= t :field_insoluble_dietary_fibers %></th>
-        <th><%= t :field_total_dietary_fibers %></th>
-        <th><%= t :field_salt_equivalents %></th>
+        <th class="text"><%= t :field_refuse %></th>
+        <% Food.nutrients.each do |nutrient| %>
+          <th><%= t("field_" + nutrient.to_s) %></th>
+        <% end %>
         <th></th>
         <th></th>
         <th></th>
@@ -88,57 +40,9 @@
           <td class="text"><%= food.number %></td>
           <td class="text"><%= food.full_name %></td>
           <td><%= food.refuse_percentage %></td>
-          <td><%= food.energy %></td>
-          <td><%= food.energy_kj %></td>
-          <td><%= food.water %></td>
-          <td><%= food.protein %></td>
-          <td><%= food.protein_sum_of_amino_acid_residuse %></td>
-          <td><%= food.lipid %></td>
-          <td><%= food.triacylglycerol_equivalents %></td>
-          <td><%= food.carbohydrate %></td>
-          <td><%= food.ash %></td>
-          <td><%= food.sodium %></td>
-          <td><%= food.potassium %></td>
-          <td><%= food.calcium %></td>
-          <td><%= food.magnesium %></td>
-          <td><%= food.phosphorus %></td>
-          <td><%= food.iron %></td>
-          <td><%= food.zinc %></td>
-          <td><%= food.copper %></td>
-          <td><%= food.manganese %></td>
-          <td><%= food.iodine %></td>
-          <td><%= food.selenium %></td>
-          <td><%= food.chromium %></td>
-          <td><%= food.molybdenum %></td>
-          <td><%= food.retinol %></td>
-          <td><%= food.alpha_carotenes %></td>
-          <td><%= food.beta_carotenes %></td>
-          <td><%= food.beta_cryptoxanthin %></td>
-          <td><%= food.bata_carotene_equivalents %></td>
-          <td><%= food.retinol_activity_equivalents %></td>
-          <td><%= food.vitamind %></td>
-          <td><%= food.alpha_tocopherols %></td>
-          <td><%= food.beta_tocopherols %></td>
-          <td><%= food.gamma_tocopherols %></td>
-          <td><%= food.delta_tocopherols %></td>
-          <td><%= food.vitamink %></td>
-          <td><%= food.thiamin %></td>
-          <td><%= food.riboflavin %></td>
-          <td><%= food.niacin %></td>
-          <td><%= food.vitaminb6 %></td>
-          <td><%= food.vitaminb12 %></td>
-          <td><%= food.folate %></td>
-          <td><%= food.pantothenic_acid %></td>
-          <td><%= food.biotin %></td>
-          <td><%= food.ascorbic_acid %></td>
-          <td><%= food.saturated_fatty_acids %></td>
-          <td><%= food.monounsaturated_fatty_acids %></td>
-          <td><%= food.polyunsaturated_fatty_acids %></td>
-          <td><%= food.cholesterol %></td>
-          <td><%= food.soluble_dietary_fibers %></td>
-          <td><%= food.insoluble_dietary_fibers %></td>
-          <td><%= food.total_dietary_fibers %></td>
-          <td><%= food.salt_equivalents %></td>
+          <% Food.nutrients.each do |nutrient| %>
+            <td><%= food.public_send nutrient %></td>
+          <% end %>
           <td><%= link_to 'Show', food %></td>
           <td><%= link_to 'Edit', edit_food_path(food) %></td>
           <td><%= link_to 'Destroy', food, method: :delete, data: { confirm: 'Are you sure?' } %></td>

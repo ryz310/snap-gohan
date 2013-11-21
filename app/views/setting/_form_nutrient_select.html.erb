@@ -1,0 +1,21 @@
+<%= form_for(@food_setting, url: {action: 'update'} ) do |f| %>
+	<table>
+		<thead>
+			<tr>
+				<th><%= t :field_nutrient_name %></th>
+				<th><%= t :field_visible_invisible %></th>
+			</tr>
+		</thead>
+		<tbody>
+			<% Food::NUTRIENTS_ALL.each do |nutrient| %>
+			  <tr class="field">
+			    <td><%= f.label t('field_' + nutrient.to_s) %></td>
+			    <td><%= f.check_box nutrient, checked_value: 1.0, unchecked_value: 0.0 %></td>
+			  </tr>			
+			<% end %>
+		</tbody>
+	</table>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
