@@ -11,7 +11,7 @@ class Menu < ActiveRecord::Base
   validates :image, file_size: {maximum: 2.megabytes}
 
   # メニューの栄養価を取得する
-  def nutritions(*names)
+  def nutrients(*names)
   	Hash.new.tap do |result|
 	  	names.each do |name|
 	  		result[name] = 0.0
