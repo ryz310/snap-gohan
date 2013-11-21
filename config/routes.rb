@@ -15,6 +15,9 @@ SnapGohan::Application.routes.draw do
 
   resources :food_groups
 
+  get   'setting', to: 'setting#index'
+  patch 'setting/update'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
