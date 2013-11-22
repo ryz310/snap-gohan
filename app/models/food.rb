@@ -21,8 +21,12 @@ class Food < ActiveRecord::Base
 
   # 管理用データで有効となっている栄養素名一覧を取得
   def Food.nutrients
-    NUTRIENTS_ALL.select do |nutrient|
-      Food.setting.public_send(nutrient) != 0.0
+    if setting = Food.setting
+      NUTRIENTS_ALL.select do |nutrient|
+        setting.public_send(nutrient) != 0.0
+      end
+    else
+      []
     end
   end
 
